@@ -1,1 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/inspectionProfiles/
+.idea/vcs.xml
+dist/
+/node_modules/
+/yarn.lock
+/yarn-error.log
+/public/bundle.js
+/.idea/
