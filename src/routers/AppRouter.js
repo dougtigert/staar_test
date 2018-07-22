@@ -27,7 +27,6 @@ const AppRouter = () => (
         <Route path='/civilWar' component={DetailPage} />
         <Route path='/reconstruction' component={DetailPage} />
         <Route path='/help' component={HelpPage} />
-        <Route component={NotFoundPage} />
       </div>
     </div>
   </BrowserRouter>
