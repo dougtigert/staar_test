@@ -6,9 +6,9 @@ import NavLink from "react-router-dom/es/NavLink";
 
 const SideBar = () => (
   <MuiThemeProvider>
-    <Drawer width={200} open={true}>
+    <Drawer width={240} open={true}>
       <div className="sidebar__sideMenu">
-        <div className="sidebar__title">Exploration to Constitution</div>
+        <div className="sidebar__title">Exploration - Constitution</div>
         <div className="sidebar__divider"></div>
         <MenuItem className="detail-sideMenu">
           <NavLink className="sidebar__links" activeClassName="is-active" to="/exploration" exact={true}>EXPLORATION</NavLink>
@@ -22,7 +22,7 @@ const SideBar = () => (
         <MenuItem>
           <NavLink className="sidebar__links" activeClassName="is-active" to="/colonization" exact={true}>COLONIZATION</NavLink>
         </MenuItem>
-        <div className="sidebar__title">Early Republic to Reconstruction</div>
+        <div className="sidebar__title">Early Republic - Reconstruction</div>
         <div className="sidebar__divider"></div>
         <MenuItem>
           <NavLink className="sidebar__links" activeClassName="is-active" to="/earlyRepublic" exact={true}>EARLY REPUBLIC</NavLink>
