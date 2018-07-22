@@ -6,8 +6,7 @@ const Header = (props) => (
     <div className="container header__inner">
       <h1 className="header__title">{props.title}</h1>
       <header className="header__links">
-        <NavLink to="/" className="normal" activeClassName="is-active" exact={true}>Dashboard</NavLink>
-        <NavLink to="/help" className="normal" activeClassName="is-active">Help</NavLink>
+        <NavLink to="/help" className="normal" activeClassName="is-active" exact={true}>Help</NavLink>
       </header>
     </div>
   </div>

@@ -11,7 +11,8 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header title="STAAR TEST" />
-      <SideBar />
+      <div style={{display: "flex", flexDirection: "column" }}>
+        <SideBar />
         <Route path='/' component={StaarTestDashboard} exact={true} />
         <Route path='/exploration' component={DetailPage} />
         <Route path='/revolution' component={DetailPage} />
@@ -27,6 +28,7 @@ const AppRouter = () => (
         <Route path='/reconstruction' component={DetailPage} />
         <Route path='/help' component={HelpPage} />
         <Route component={NotFoundPage} />
+      </div>
     </div>
   </BrowserRouter>
 );

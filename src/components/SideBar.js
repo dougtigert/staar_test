@@ -8,6 +8,7 @@ const SideBar = () => (
   <MuiThemeProvider>
     <Drawer width={200} open={true}>
       <div className="detail__sideMenu">
+        <div className="sidebar__title">Exploration - Constitution</div>
         <MenuItem className="detail-sideMenu">
           <NavLink className="dashboard__link" activeClassName="is-active" to="/exploration" exact={true}>EXPLORATION</NavLink>
         </MenuItem>
@@ -20,6 +21,7 @@ const SideBar = () => (
         <MenuItem>
           <NavLink className="dashboard__link" activeClassName="is-active" to="/colonization" exact={true}>COLONIZATION</NavLink>
         </MenuItem>
+        <div className="sidebar__title">Early Republic - Reconstruction</div>
         <MenuItem>
           <NavLink className="dashboard__link" activeClassName="is-active" to="/earlyRepublic" exact={true}>EARLY REPUBLIC</NavLink>
         </MenuItem>
