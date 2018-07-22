@@ -84,30 +84,40 @@ class DetailPage extends React.Component  {
     }));
   };
 
-  handlePick(row,column,event) {
-    if(column === 0) {
+  handlePick(row,column,event, x) {
+    var data = this.state.jsonData.data[row];
+
+    let year = "";
+    let pic = "";
+    switch(column) {
+      case 2:
+        year = "2013";
+        pic = data.pic2013;
+        break;
+      case 3:
+        year = "2014";
+        pic = data.pic2014;
+        break;
+      case 4:
+        year = "2015";
+        pic = data.pic2015;
+        break;
+      case 5:
+        year = "2016";
+        pic = data.pic2016;
+        break;
+      case 6:
+        year = "2017";
+        pic = data.pic2017;
+        break;
+    }
+
+
+    if(column === 0 || column === 1 || pic === "") {
       this.setState(() => ({
         selectedDetail: undefined
       }));
     } else {
-      let year = "";
-      switch(column) {
-        case 2:
-        year = "2013";
-        break;
-        case 3:
-          year = "2014";
-          break;
-        case 4:
-          year = "2015";
-          break;
-        case 5:
-          year = "2016";
-          break;
-        case 6:
-          year = "2017";
-          break;
-      }
       const updatedSelectedDetail = {...this.state.jsonData.data[row], yearSelected: year};
       this.setState(() => ({
         selectedDetail: updatedSelectedDetail
@@ -161,11 +171,11 @@ class DetailPage extends React.Component  {
                 <TableRow key={index} className="hoverPointer detailPage__wrap">
                   <TableRowColumn className="detailPage__wrap"style={{wordWrap: 'break-word', whiteSpace: 'normal'}}>{row.title}</TableRowColumn>
                   <TableRowColumn>{row.lesson}</TableRowColumn>
-                  <TableRowColumn><Action year="2013" data={row.pic2013}/></TableRowColumn>
-                  <TableRowColumn><Action year="2014" data={row.pic2014}/></TableRowColumn>
-                  <TableRowColumn><Action year="2015" data={row.pic2015}/></TableRowColumn>
-                  <TableRowColumn><Action year="2016" data={row.pic2016}/></TableRowColumn>
-                  <TableRowColumn><Action year="2017" data={row.pic2017}/></TableRowColumn>
+                  <TableRowColumn><Action year={row.pic2013 ? "2013" : ""} data={row.pic2013}/></TableRowColumn>
+                  <TableRowColumn><Action year={row.pic2014 ? "2014" : ""} data={row.pic2014}/></TableRowColumn>
+                  <TableRowColumn><Action year={row.pic2015 ? "2015" : ""} data={row.pic2015}/></TableRowColumn>
+                  <TableRowColumn><Action year={row.pic2016 ? "2016" : ""} data={row.pic2016}/></TableRowColumn>
+                  <TableRowColumn><Action year={row.pic2017 ? "2017" : ""} data={row.pic2017}/></TableRowColumn>
                 </TableRow>
               ))}
             </TableBody>

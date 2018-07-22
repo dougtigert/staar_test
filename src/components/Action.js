@@ -1,12 +1,8 @@
 import React from 'react';
 import CheckIcon from "../assets/icons/CheckIcon";
 
-const Action = (props) => {
-
-  return (
-    <div>
+const Action = (props) => (
       <div onClick={props.handlePick}>{props.data ? <CheckIcon /> : ""}</div>
-    </div>
-  );
-};
+);
+
 export default Action
